@@ -22,7 +22,6 @@ def load_text(text_widget):
             return data.get("bg", "#fff48c"), (data.get("font_family", "Segoe UI"), data.get("font_size", 11))
     return "#fff48c", ("Segoe UI", 11)
 
-# --- dragging ---
 def make_draggable(widget, target_window):
     widget.bind("<ButtonPress-1>", lambda e: start_move(e, target_window))
     widget.bind("<ButtonRelease-1>", lambda e: stop_move(target_window))
@@ -40,3 +39,4 @@ def do_move(event, win):
     x = win.winfo_x() + (event.x - win.start_x)
     y = win.winfo_y() + (event.y - win.start_y)
     win.geometry(f"+{x}+{y}")
+
