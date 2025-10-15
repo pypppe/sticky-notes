@@ -23,7 +23,7 @@ def create_main_window(on_close_callback, open_settings_callback):
 
     make_draggable(header, root)
 
-    # text area
     text = tk.Text(root, wrap="word", font=("Segoe UI", 11), bg="#fff48c", fg="#202020", bd=0, highlightthickness=0, insertbackground="#000000")
     text.pack(expand=True, fill="both")
     return root, text
+
